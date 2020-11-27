@@ -13,3 +13,12 @@ pub fn gcd(a:u64,b:u64) -> u64{
 pub fn lcm(a:u64,b:u64) -> u64{
     a*b/gcd(a,b)
 }
+#[test]
+fn test_gcd(){
+    assert_eq!(gcd(57,3),3);
+}
+
+#[test]
+fn test_lcm(){
+    assert_eq!(lcm(57,3),57);
+}
