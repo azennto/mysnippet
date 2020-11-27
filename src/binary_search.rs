@@ -46,3 +46,10 @@ impl <T:Ord> BinarySearch<T> for [T] {
 }
 
 
+#[test]
+fn test_binarysearch() {
+    let vec = vec![1, 2, 4, 6, 7, 12, 54, 60];
+
+    assert_eq!(vec.lower_bound(&4), 2);
+    assert_eq!(vec.upper_bound(&4), 3);
+}
