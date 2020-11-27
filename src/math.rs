@@ -56,3 +56,10 @@ fn test_prime_judge(){
     assert_eq!(prime_judge(2),true);
     assert_eq!(prime_judge(10),false);
 }
+
+#[test]
+fn test_div_enum(){
+    let mut x = div_enum(12);
+    x.sort();
+    assert_eq!(x,[1,2,3,4,6,12]);
+}
