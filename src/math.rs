@@ -27,6 +27,20 @@ pub fn prime_judge(n:usize) -> bool{
     return true;
 }
 
+#[snippet]
+pub fn div_enum(n:usize) -> Vec<usize>{
+    let mut ans :Vec<usize> = Vec::new();
+    for i in (1..=n).take_while(|&i| i*i <= n) {
+       if n%i == 0 {
+        ans.push(i);
+        if n/i != i {
+            ans.push(n/i);
+        }
+       } 
+    }
+    return ans;
+}
+
 #[test]
 fn test_gcd(){
     assert_eq!(gcd(57,3),3);
