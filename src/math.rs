@@ -36,3 +36,9 @@ fn test_gcd(){
 fn test_lcm(){
     assert_eq!(lcm(57,3),57);
 }
+
+#[test]
+fn test_prime_judge(){
+    assert_eq!(prime_judge(2),true);
+    assert_eq!(prime_judge(10),false);
+}
